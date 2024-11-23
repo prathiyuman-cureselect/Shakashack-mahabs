@@ -26,22 +26,27 @@
     /* Gradient from top to bottom */
 }
 
-span,
-h2,
-.merdian {
-    font-family: 'Merienda One', cursive;
-}
-
-h3,
-.kitone {
-    font-family: 'Kite One', sans-serif;
-}
-
-/* Apply Laila to specific elements */
-p,
-.laila-text {
+.lao-muang {
+    font-family: 'Lao Muang Don', serif;
+  }
+  .laila {
     font-family: 'Laila', serif;
-}
+  }
+.kalam {
+    font-family: 'Kalam', sans-serif;
+  }
+  .mynerve {
+    font-family: 'Mynerve', cursive;
+  }
+  .pacifico {
+    font-family: 'Pacifico', cursive;
+  }
+  .merienda-one {
+    font-family: 'Merienda One', cursive;
+  }
+  .lao-sans-pro {
+    font-family: 'Lao Sans Pro', sans-serif;
+  }
    /* Style for Hero Slider */
    .hero-slider {
     position: relative;

@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="./output.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Kite+One&family=Laila&family=Merienda+One&display=swap"
+    <link
+        href="https://fonts.googleapis.com/css2?family=Kalam&family=Mynerve&family=Pacifico&family=Merienda+One&family=Lao+Sans+Pro:wght@400;700&family=Lao+Muang+Don:wght@400;700&family=Laila:wght@400;700&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
@@ -30,15 +31,15 @@
 
         <!-- Tagline and Title -->
         <div class="text-center hidden md:block">
-            <p class="text-sm text-gray-600">Where Waves, Vibes and Flavor Flow Together</p>
-            <h1 class="text-xl font-bold text-teal-600">SHAKA SHACK</h1>
+            <p class="text-sm text-gray-600 kalam">Where Waves, Vibes and Flavor Flow Together</p>
+            <h1 class="text-2xl font-light text-teal-600 mynerve ">SHAKA SHACK</h1>
         </div>
 
         <!-- Download Button -->
         <button
             class="hidden md:flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none">
             <img src="Image/download-circular-button.png" alt="" class="h-6">
-            <h1 class="hidden ml-2 md:inline">Download Menu</h1>
+            <h1 class="hidden ml-2 md:inline ">Download Menu</h1>
         </button>
     </header>
 
@@ -104,21 +105,21 @@
 
         <!-- Text Content -->
         <div class="md:w-2/3 space-y-4">
-            <h2 class="text-3xl font-bold text-gray-800">About Us</h2>
-            <h3 class="text-xl text-kitone text-gray-600">Welcome to Our Beach Shack</h3>
-            <p class="text-gray-600">
+            <h2 class="text-3xl font-bold text-gray-800 pacifico text-center">About Us</h2>
+            <h3 class="text-xl text-kitone text-gray-600 merienda-one text-center">Welcome to Our Beach Shack</h3>
+            <p class="text-gray-600 lao-sans-pro text-center">
                 Nestled right by the shore, our beach shack is more than just a place to grab a bite. It’s a vibrant hub
                 where culinary passion meets coastal bliss. Here, we serve top-notch dishes prepared from scratch with
                 love, using only the freshest catch of the day and locally sourced ingredients. Each meal is a testament
                 to our commitment to fine dining, re-imagined in a relaxed, beachy atmosphere.
             </p>
-            <p class="text-gray-600">
+            <p class="text-gray-600 lao-sans-pro text-center">
                 Whether you’re looking for a cozy spot to work, a venue for an intimate gathering, or a lively night
                 out, our shack is the perfect backdrop. Picture this: a sunset-soaked evening filled with laughter,
                 karaoke, and beer pong, all while the sound of waves serenades your groovy beats that keep the vibe
                 alive.
             </p>
-            <p class="text-gray-600">
+            <p class="text-gray-600 lao-sans-pro text-center">
                 Join us in our little slice of paradise, where every moment is designed to welcome, provide, and fulfill
                 your every desire. Come for the food, stay for the fun, and leave with memories that will last a
                 lifetime!
@@ -137,123 +138,516 @@
     <section class="mt-10" id="services">
         <div class="bg-white rounded-lg max-w-7xl mx-auto p-4">
             <!-- Header -->
-            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2">Services</h2>
-            <h3 class="text-center text-gray-600 mb-6">
+            <h2 class="text-3xl font-bold text-center text-gray-800 mb-2 pacifico">Services</h2>
+            <h3 class="text-center text-gray-600 mb-6 lao-sans-pro">
                 Shaka Shack offers fresh, fine dining - style meals and a laid-back beach vibe, along with lessons in
                 Surfing, Scuba Diving, Kayaking, Yoga, and HIIT whether you seek adventure, wellness, or fun-filled
                 evenings with Karaoke and Sun Downers, we’ve got you covered.
             </h3>
-
             <!-- Cards Section -->
             <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div
                     class="border-red-300 border-2 text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
                     <div class="bg-orange-500 text-white p-2 text-xl text-center">
-                        <h2 class="text-merdian">Yoga</h2>
-                        <p class="text-sm">Find Your Flow, Breath with the Waves</p>
+                        <h2 class="merienda-one">Yoga</h2>
+                        <p class="text-sm kalam">Find Your Flow, Breathe with the Waves</p>
                     </div>
                     <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga"
                         class="w-full h-32 object-cover">
                     <div class="p-4">
-                        <p class="text-md mb-3">Led by a skilled instructor with expertise in Ashtanga, Vinyasa, Animal
+                        <p class="text-md mb-3 lao-sans-pro">Led by a skilled instructor with expertise in Ashtanga,
+                            Vinyasa, Animal
                             Flow, Yin, and Acro yoga, each session can be customised to help you...</p>
                         <div class="-mx-4 border-t my-3" style="border-color: #ff8800;"></div>
-                        <a href="#" class="text-orange-500 font-semibold text-sm flex items-center justify-center">
-                            View more <span class="ml-1">&raquo;</span>
-                        </a>
+                        <div class="flex justify-center">
+                            <button class="text-orange-500 font-semibold text-sm flex items-center justify-center"
+                                onclick="openModal('popupModal')">
+                                View more <span class="ml-1">&raquo;</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- Yoga Modal -->
+                <div id="popupModal"
+                    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[80vh] shadow-lg relative">
+                        <!-- Fixed Header -->
+                        <div class="p-6 border-b border-gray-200">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-600"
+                                onclick="closeModal('popupModal')">
+                                &times;
+                            </button>
+                            <h2 class="text-2xl font-bold text-orange-500 mb-2 merienda-one">Yoga Session Details</h2>
+                            <p class="text-gray-700">
+                                Dive deep into your yoga practice with tailored sessions led by expert instructors.
+                                Experience a mix of traditional and modern yoga styles such as Ashtanga, Vinyasa, Animal
+                                Flow, Yin, and Acro yoga.
+                            </p>
+                        </div>
+
+                        <!-- Scrollable Content -->
+                        <div class="p-6 overflow-y-auto scrollbar-hide" style="max-height: calc(80vh - 120px);">
+                            <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga Detail"
+                                class="w-full rounded-lg mb-4">
+                            <p>
+                                At Shaka Shack, our yoga classes are thoughtfully designed to cater to individual needs
+                                and levels, ensuring a personalised experience for every participant. Led by a skilled
+                                instructor with expertise in Ashtanga, Vinyasa, Animal Flow, Yin, and Acro yoga, each
+                                session can be customised to help you achieve your specific goals, whether you're a
+                                beginner or an experienced yogi.
+                            </p>
+                            <br>
+                            <p>
+                                A key focus of our classes is the synchronisation of movement and breath, which is
+                                essential for enhancing your practice. Our instructor emphasises correct form and
+                                posture to ensure that you not only feel the benefits of each pose but also practice
+                                safely and effectively. Join us at Shaka Shack for a transformative yoga experience that
+                                aligns your body and mind while enjoying the tranquil beach atmosphere.
+                            </p>
+                        </div>
                     </div>
                 </div>
 
                 <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                     style="border-color: #039be5;">
                     <div class=" text-white p-2 text-xl text-center" style="background-color:#039be5 ;">
-                        <h2 class="text-merdian">Surfing</h2>
-                        <p class="text-sm">Riding Waves at a UNESCO Heritage Site</p>
+                        <h2 class="text-merdian merienda-one">Surfing</h2>
+                        <p class="text-sm kalam">Riding Waves at a UNESCO Heritage Site</p>
                     </div>
                     <img src="Image/sportive-woman-surging.png" alt="Surfing" class="w-full h-32 object-cover">
                     <div class="p-4">
-                        <p class="text-md">Surfing at Mahabalipuram is a rare opportunity to connect with the vast ocean
+                        <p class="text-md lao-sans-pro">Surfing at Mahabalipuram is a rare opportunity to connect with
+                            the vast ocean
                             that holds centuries of history and spirituality and offers a unique surfing experience....
                         </p>
                         <div class="-mx-4 border-t my-3" style="border-color: #039be5;"></div>
-                        <a href="#" class="font-semibold text-sm flex items-center justify-center"
-                            style="color: #0284c7;">
-                            View more <span class="ml-1">&raquo;</span>
-                        </a>
-                    </div>
-                </div>
-                <div
-                    class="border-red-500 border-2 rounded-lg text-gray-900 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                    <div class="bg-red-500 text-white p-2 text-xl text-center">
-                        <h2 class="text-merdian">HIIT & Calisthenics</h2>
-                        <p class="text-sm">Sweat, Strengthen, Soak in the Vibes</p>
-                    </div>
-                    <img src="Image/beautiful-girl-doing-yoga.png" alt="HIIT" class="w-full h-32 object-cover">
-                    <div class="p-4">
-                        <p class="text-md mb-3">Each session is carefully tailored to meet the specific fitness levels
-                            and needs of each individual, ensuring that everyone, from beginners to advanced...</p>
-                        <div class="-mx-4 border-t my-3" style="border-color: #fc5245;"></div>
-                        <a href="#" class="text-red-500 font-semibold text-sm flex items-center justify-center">
-                            View more <span class="ml-1">&raquo;</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4">
-                <div class="border bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #4168c9;">
-                    <div class="bg-blue-600 text-white p-2 text-xl text-center">
-                        <h2>Work</h2>
-                        <p class="text-sm">Work with a View</p>
-                    </div>
-                    <img src="Image/medium-shot-man-working-beach.png" alt="Yoga" class="w-full h-32 object-cover">
-                    <div class="p-4">
-                        <p class="text-md mb-3">Enjoy the calming sound of waves as you work, fuelled by our delicious
-                            food and freshly brewed coffee. With reliable high-speed WiFi, you can stay..</p>
-                        <div>
-                            <div class="-mx-4 border-t my-3" style="border-color: #4168c9;"></div>
-                            <a href="#" class="text-blue-700 font-semibold text-sm flex items-center justify-center">
+                        <div class="flex justify-center">
+                            <button href="#" class="font-semibold text-sm flex items-center justify-center"
+                                onclick="openModal('popupModal1')" style="color: #0284c7;">
                                 View more <span class="ml-1">&raquo;</span>
-                            </a>
+                            </button>
                         </div>
                     </div>
                 </div>
-                <div class="border bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+
+
+                <!-- Modal -->
+                <div id="popupModal1"
+                    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[80vh] shadow-lg relative">
+                        <!-- Fixed Header -->
+                        <div class="p-6 border-b border-gray-200">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-600"
+                                onclick="closeModal('popupModal1')">
+                                &times;
+                            </button>
+                            <h2 class="text-2xl font-bold text-blue-500 mb-2 merienda-one">SURFING - Riding Waves at a
+                                UNESCO
+                                Heritage Site</h2>
+                        </div>
+
+                        <!-- Scrollable Content -->
+                        <div class="p-6 overflow-y-auto scrollbar-hide" style="max-height: calc(80vh - 120px);">
+                            <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga Detail"
+                                class="w-full rounded-lg mb-4">
+                            <p class="text-gray-700">
+                                Surfing at Mahabalipuram is a rare opportunity to connect with the ocean in a setting
+                                that holds centuries of history and spirituality offers a unique surfing experience
+                                where spirituality, history, culture and nature converge. Whether you're a beginner
+                                riding your first wave or a seasoned surfer seeking new challenges, the combination of
+                                powerful waves, stunning coastal views, and the presence of the ancient Shore Temple
+                                makes this experience truly one-of-a-kind. Embrace the adventure of surfing at
+                                Mahabalipuram and immerse yourself in a place where every wave is a step back in time.
+                                Surfing here is not just about catching waves; it's about immersing yourself in the
+                                heritage and natural beauty of a location with deep historical significance. </p>
+
+
+                            <h1 class="text-xl font-bold text-black mt-4">Why Mahabalipuram?</h1>
+                            <div class="mt-4">
+                                <p>
+                                    <span>• Historical Significance: </span>At Shaka Shack, our yoga classes are
+                                    thoughtfully designed to cater to individual needs
+                                    and levels, ensuring a personalised experience for every participant. Led by a
+                                    skilled
+                                    instructor with expertise in Ashtanga, Vinyasa, Animal Flow, Yin, and Acro yoga,
+                                    each
+                                    session can be customised to help you achieve your specific goals, whether you're a
+                                    beginner or an experienced yogi.
+                                </p>
+                                <br>
+                                <p>
+                                    <span>• The Best Surf Breaks: </span> A key focus of our classes is the
+                                    synchronisation
+                                    of movement and breath, which is
+                                    essential for enhancing your practice. Our instructor emphasises correct form and
+                                    posture to ensure that you not only feel the benefits of each pose but also practice
+                                    safely and effectively. Join us at Shaka Shack for a transformative yoga experience
+                                    that
+                                    aligns your body and mind while enjoying the tranquil beach atmosphere.
+                                </p>
+                            </div>
+
+                            <h1 class="text-xl font-bold text-black mt-4">Surfing Classes Overview:</h1>
+                            <div class="mt-4">
+                                <p>
+                                    <span>• Beginner Lessons: </span>For newcomers, instructors focus on the basics of
+                                    paddling, catching small waves, and understanding ocean safety. Lessons take place
+                                    in the calmer surf zones, allowing beginners to build their skills while enjoying
+                                    the scenic views of the Shore Temple
+                                </p>
+                                <br>
+                                <p>
+                                    <span>•Intermediate and Advanced Classes: </span> For those with some surfing
+                                    experience, the classes dive deeper into mastering wave selection, improving
+                                    techniques like carving and turning, and riding longer, more challenging waves.
+                                    Instructors guide surfers to the best breaks, ensuring a rewarding experience
+                                    tailored to their skill levels.
+                                </p>
+                            </div>
+
+                            <h1 class="text-xl font-bold text-black mt-4">A Unique Surfing Experience:</h1>
+                            <div class="mt-4">
+                                <p>
+                                    <span>•Blend of Culture and Sport: </span>Surfing classes at Mahabalipuram provide
+                                    more than just an opportunity to ride waves. The setting offers a chance to explore
+                                    the rich cultural heritage, from the ancient rock carvings of Arjuna's Penance to
+                                    the architectural grandeur of the Shore Temple. After a surf session, you can take a
+                                    stroll through the town’s historic sites, making it a holistic experience.
+                                </p>
+                                <br>
+                                <p>
+                                    <span>• Eco-Friendly and Respectful Practices: </span> Surf schools in Mahabalipuram
+                                    often emphasise eco-friendly practices, such as using biodegradable surf wax and
+                                    promoting respect for marine life. Given the location's historical and ecological
+                                    importance, classes include guidance on how to surf responsibly and preserve the
+                                    beauty of the area.
+                                </p>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+
+
+                <div
+                    class="border-red-500 border-2 rounded-lg text-gray-900 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                    <div class="bg-red-500 text-white p-2 text-xl text-center">
+                        <h2 class=" merienda-one">HIIT & Calisthenics</h2>
+                        <p class="text-sm kalam">Sweat, Strengthen, Soak in the Vibes</p>
+                    </div>
+                    <img src="Image/beautiful-girl-doing-yoga.png" alt="HIIT" class="w-full h-32 object-cover">
+                    <div class="p-4">
+                        <p class="text-md mb-3 lao-sans-pro">Each session is carefully tailored to meet the specific
+                            fitness levels
+                            and needs of each individual, ensuring that everyone, from beginners to advanced...</p>
+                        <div class="-mx-4 border-t my-3" style="border-color: #fc5245;"></div>
+                        <div class="flex justify-center">
+                            <button onclick="openModal('popupModal2')"
+                                class="text-red-500 font-semibold text-sm flex items-center justify-center">
+                                View more <span class="ml-1">&raquo;</span>
+                            </button>
+                        </div>
+
+                    </div>
+                </div>
+
+                <!-- Modal -->
+                <div id="popupModal2"
+                    class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                    <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[80vh] shadow-lg relative">
+                        <!-- Fixed Header -->
+                        <div class="p-6 border-b border-gray-200">
+                            <button class="absolute top-2 right-2 text-gray-600 hover:text-red-600"
+                                onclick="closeModal('popupModal2')">
+                                &times;
+                            </button>
+                            <h2 class="text-2xl font-bold text-text-500 mb-2 merienda-one text-red-500">HIIT &
+                                CALISTHENICS - Sweat. Strengthen.
+                                Soak in the Vibes</h2>
+                        </div>
+
+                        <!-- Scrollable Content -->
+                        <div class="p-6 overflow-y-auto scrollbar-hide" style="max-height: calc(80vh - 120px);">
+                            <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga Detail"
+                                class="w-full rounded-lg mb-4">
+
+                            <p class="text-gray-700 ">
+                                • This fitness class is designed to offer two main types of high-intensity interval
+                                training (HIIT) sessions: those incorporating weights and those using bodyweight
+                                exercises (Calisthenics). Each session is carefully tailored to meet the specific
+                                fitness levels and needs of each individual, ensuring that everyone, from beginners to
+                                advanced participants, can safely and effectively achieve their fitness goals.</p>
+                            <p class="text-gray-700">
+                                • They are effective workout methods that focus on maximising fitness in a
+                                time-efficient manner. HIIT involves short bursts of intense exercise followed by brief
+                                recovery periods, promoting cardiovascular fitness and fat loss. Calisthenics, on the
+                                other hand, emphasises bodyweight exercises like push-ups, squats, and pull-ups,
+                                enhancing strength, flexibility, and endurance without the need for equipment. Together,
+                                these approaches offer a versatile fitness routine that can be adapted to various skill
+                                levels and fitness goals, promoting overall physical health and performance</p>
+                        </div>
+                        <h1 class="text-2xl font-bold">1. HIIT with Weights:</h1>
+                    </div>
+                </div>
+
+            </div>
+            <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4">
+                <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                    style="border-color: #4168c9;">
+                    <div class="bg-blue-600 text-white p-2 text-xl text-center">
+                        <h2 class="merienda-one">Work</h2>
+                        <p class="text-sm kalam">Work with a View</p>
+                    </div>
+                    <img src="Image/medium-shot-man-working-beach.png" alt="Yoga" class="w-full h-32 object-cover">
+                    <div class="p-4">
+                        <p class="text-md mb-3 lao-sans-pro">Enjoy the calming sound of waves as you work, fuelled by
+                            our delicious
+                            food and freshly brewed coffee. With reliable high-speed WiFi, you can stay..</p>
+                        <div>
+                            <div class="-mx-4 border-t my-3" style="border-color: #4168c9;"></div>
+                            <div class="flex justify-center">
+                                <button onclick="openModal('popupModal3')"
+                                    class="text-blue-500 font-semibold text-sm flex items-center justify-center">
+                                    View more <span class="ml-1">&raquo;</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="popupModal3"
+                        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[80vh] shadow-lg relative">
+                            <!-- Fixed Header -->
+                            <div class="p-6 border-b border-gray-200">
+                                <button class="absolute rounded-lg top-2 right-2 text-gray-600 hover:text-red-600"
+                                    onclick="closeModal('popupModal3')">
+                                    &times;
+                                </button>
+                                <h2 class="text-2xl font-bold text-blue-500 mb-2 merienda-one">Discover the perfect
+                                    blend of
+                                    productivity and relaxation at our cozy workspace by the beach! </h2>
+                            </div>
+
+                            <!-- Scrollable Content -->
+                            <div class="p-6 overflow-y-auto scrollbar-hide" style="max-height: calc(80vh - 120px);">
+                                <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga Detail"
+                                    class="w-full rounded-lg mb-4">
+
+                                <p class="text-gray-700">
+                                    • Enjoy the calming sound of waves as you work, fuelled by our delicious food and
+                                    freshly brewed coffee. With high-speed WiFi, you can stay connected while soaking in
+                                    the inspiring coastal views.</p>
+                                <p class="text-gray-700">
+                                    • Whether you’re working solo or collaborating with a team, our relaxed yet vibrant
+                                    environment offers a refreshing alternative to traditional office setting</p>
+                                <p class="text-gray-700">
+                                    • When it’s time to take a break, rejuvenate your mind and body with our yoga and
+                                    workout sessions, or dive into adventure with our surfing and scuba diving options.
+                                    Whether you’re tackling projects or seeking a little tranquility, our beachside
+                                    oasis is designed to enhance your creative flow and well-being.
+
+                                </p>
+                                <p class="text-gray-700">
+                                    • Once your workday wraps up, the shack transforms into a lively social spot, with
+                                    evenings filled with karaoke, beer pong, and sundowner sessions that bring a cozy
+                                    beach club atmosphere. </p>
+                                <p class="text-gray-700">
+                                    • Join us and transform your workday into a refreshing experience!</p>
+                            </div>
+                            <!-- <h1 class="text-2xl font-bold">1. HIIT with Weights:</h1> -->
+                        </div>
+                    </div>
+
+                </div>
+                <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                     style="border-color: #65b13b;">
                     <div class="text-white p-2 text-xl text-center" style="background-color: #65b13b;">
-                        <h2>Scuba Diving</h2>
-                        <p class="text-sm">Dive into History and Nature</p>
+                        <h2 class="merienda-one">Scuba Diving</h2>
+                        <p class="text-sm kalam">Dive into History and Nature</p>
                     </div>
                     <img src="Image/portrait-scuba-diver-sea-water-with-marine-life.png" alt="Surfing"
                         class="w-full h-32 object-cover">
                     <div class="p-4">
-                        <p class="text-md mb-3">Experience scuba diving in the unique setting of Mahabalipuram, a UNESCO
+                        <p class="text-md mb-3 lao-sans-pro">Experience scuba diving in the unique setting of
+                            Mahabalipuram, a UNESCO
                             World
-                            Heritage town on the southeastern coast of India an ancient Shore...</p>
+                            Heritage town on the southeastern coast of India ancient Shore...</p>
                         <div class="-mx-4 border-t my-3" style="border-color: #65b13b;"></div>
 
-                        <a href="#" class="font-semibold text-sm flex items-center justify-center"
-                            style="color: #65b13b;">
-                            View more <span class="ml-1">&raquo;</span>
-                        </a>
+                        <div class="flex justify-center">
+                            <button onclick="openModal('popupModal4')"
+                                class="text-green-500 font-semibold text-sm flex items-center justify-center">
+                                View more <span class="ml-1">&raquo;</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div id="popupModal4"
+                        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[80vh] shadow-lg relative">
+                            <!-- Fixed Header -->
+                            <div class="p-6 border-b border-gray-200">
+                                <button class="absolute top-2 right-2 text-gray-600 hover:text-red-600"
+                                    onclick="closeModal('popupModal4')">
+                                    &times;
+                                </button>
+                                <h2 class="text-2xl font-bold text-green-500 mb-2 merienda-one">Dive into History and
+                                    Nature </h2>
+                            </div>
+
+                            <!-- Scrollable Content -->
+                            <div class="p-6 overflow-y-auto scrollbar-hide" style="max-height: calc(80vh - 120px);">
+                                <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga Detail"
+                                    class="w-full rounded-lg mb-4">
+
+                                <p class="text-gray-700">
+                                    • Experience scuba diving in the unique setting of Mahabalipuram, a UNESCO World
+                                    Heritage town on the southeastern coast of India. Mahabalipuram, also known as
+                                    Mamallapuram, is famous for its ancient Shore Temple, built in the 8th century AD.
+                                    This temple is the last of the legendary "Seven Pagodas" that once stood along this
+                                    coast, offering a breathtaking historical backdrop for divers.</p>
+                                <p class="text-gray-700">
+                                    •The diving sessions here provide a blend of adventure and cultural immersion,
+                                    allowing participants to explore the marine life of the Bay of Bengal while
+                                    marveling at the architectural beauty of this ancient town. The waters around
+                                    Mahabalipuram are home to diverse marine species and coral formations, making each
+                                    dive a chance to encounter vibrant sea life.</p>
+                                <h2>What to Expect:</h2>
+                                <p class="text-gray-700">
+                                    • For Beginners: Introductory sessions focus on basic diving skills and underwater
+                                    safety, making it accessible for those new to scuba diving.
+
+                                </p>
+                                <p class="text-gray-700">
+                                    • For Certified Divers: More advanced dives offer exploration of deeper sites,
+                                    including underwater rock formations and the opportunity to discover marine habitats
+                                    near the historic temple. </p>
+                                <p class="text-gray-700">
+                                    • Experienced Instructors: All sessions are led by certified instructors who ensure
+                                    a safe and memorable diving experience while sharing insights about the cultural
+                                    significance of the surroundings.
+
+                                </p>
+                                <p class="text-gray-700">
+                                    • Scuba diving in Mahabalipuram is more than just an underwater adventure; it is a
+                                    journey through time, offering a unique perspective of a heritage site that has
+                                    stood the test of centuries. Dive into the waters of history and discover the magic
+                                    beneath the waves in this extraordinary coastal town.
+
+                                </p>
+
+                            </div>
+                            <!-- <h1 class="text-2xl font-bold">1. HIIT with Weights:</h1> -->
+                        </div>
                     </div>
                 </div>
 
-                <div class="border bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
+                <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
                     style="border-color: #a21caf;">
                     <div class="text-white p-2 text-xl text-center" style="background-color: #a21caf;">
-                        <h2>Kayaking & Snorkeling</h2>
-                        <p class="text-sm text-merdian">A Heritage Adventure</p>
+                        <h2 class="merienda-one ">Kayaking & Snorkeling</h2>
+                        <p class="text-sm kalam">A Heritage Adventure</p>
                     </div>
                     <img src="Image/couple-together-kayaking-river.png" alt="HIIT" class="w-full h-32 object-cover">
                     <div class="p-4">
-                        <p class="text-md mb-3">Kayaking along the serene coastline offers a unique perspective of the
+                        <p class="text-md mb-3 lao-sans-pro">Kayaking along the serene coastline offers a unique
+                            perspective of the
                             ancient Shore Temple, allowing you to paddle past the breathtaking silhouette...</p>
                         <div class="-mx-4 border-t my-3" style="border-color: #a21caf;"></div>
-                        <a href="#" class="font-semibold text-sm flex items-center justify-center"
-                            style="color: #a21caf;">
-                            View more <span class="ml-1">&raquo;</span>
-                        </a>
+                        <div class="flex justify-center">
+                            <button onclick="openModal('popupModal5')"
+                                class="font-semibold text-sm flex items-center justify-center" style="color: #a21caf;">
+                                View more <span class="ml-1">&raquo;</span>
+                            </button>
+                        </div>
+
+                    </div>
+                    <div id="popupModal5"
+                        class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+                        <div class="bg-white rounded-lg w-11/12 md:w-3/4 lg:w-2/3 max-h-[80vh] shadow-lg relative">
+                            <!-- Fixed Header -->
+                            <div class="p-6 border-b border-gray-200">
+                                <button class="absolute top-2 right-2 text-gray-600 hover:text-red-600"
+                                    onclick="closeModal('popupModal5')">
+                                    &times;
+                                </button>
+                                <h2 class="text-2xl font-bold mb-2 merienda-one" style="color: #a21caf;">KAYAKING &
+                                    SNORKELLING : a heritage
+                                    adventure </h2>
+                            </div>
+
+                            <!-- Scrollable Content -->
+                            <div class="p-6 overflow-y-auto scrollbar-hide" style="max-height: calc(80vh - 120px);">
+                                <img src="Image/full-shot-people-doing-yoga-seaside 2.png" alt="Yoga Detail"
+                                    class="w-full rounded-lg mb-4">
+
+                                <p class="text-gray-700">
+                                    • Experience the thrill of kayaking and snorkeling in Mahabalipuram, a UNESCO World
+                                    Heritage town on the southeastern coast of India. Known for its stunning 7th-century
+                                    AD Shore Temple, Mahabalipuram is home to the last standing structure of the
+                                    legendary "Seven Pagodas" and an array of intricate monolithic stone carvings.</p>
+                                <p class="text-gray-700">
+                                    •Kayaking along the coastline offers a unique perspective of the ancient Shore
+                                    Temple, allowing you to paddle past the breathtaking silhouette of this historical
+                                    monument as it stands against the backdrop of the Bay of Bengal. As you navigate
+                                    through calm waters, you can admire the rich heritage of the town from the sea,
+                                    making it a peaceful yet captivating adventure.</p>
+                                <h2>What to Expect:</h2>
+                                <p class="text-gray-700">
+                                    • For those eager to explore beneath the waves, snorkeling is an incredible way to
+                                    uncover the hidden treasures of Mahabalipuram’s underwater world. Weather
+                                    permitting, you can snorkel around the submerged ruins of the ancient temples that
+                                    legends say were part of the original “Seven Pagodas.” The underwater structures
+                                    create a fascinating seascape, offering a glimpse into history while surrounded by
+                                    vibrant marine life.
+
+                                </p>
+                                <h3 class="font-bold">HIGHLIGHTS</h3>
+                                <p class="text-gray-700">
+                                    • Embrace the beach lifestyle with our diverse facilities - beachfront dining, ocean
+                                    sports, wellness classes and groovy tunes playing all day long. Relax in style and
+                                    enjoy the vibrant atmosphere of our seaside retreat. </p>
+                                <h3 class="font-bold">Cusine </h3>
+                                <p class="text-gray-700">
+                                    • Savour our delectable cuisine crafted from locally sourced ingredients, offering a
+                                    fusion of flavours that tantalise the taste buds. Our chefs create culinary
+                                    masterpieces that reflect the essence of coastal dining, ensuring a memorable
+                                    gastronomic journey for every guest.
+
+                                </p>
+                                <h3 class="font-bold">Adventure Awaits</h3>
+                                <p class="text-gray-700">
+                                    • Embark on thrilling adventures with our array of activities, from surfing the
+                                    waves to exploring the underwater world through scuba diving. Unwind with kayaking
+                                    excursions, find inner peace with yoga sessions, or boost your fitness with our
+                                    High-Intensity Interval Training courses. There's something for every enthusiast at
+                                    Shaka Shack!
+
+                                </p>
+                                <h3 class="font-bold">Events</h3>
+                                <h7>Follow our Instagram page for our events like salsa / bachata nights, sundowners,
+                                    live music gig, etc..</h7>
+                                <p class="text-gray-700">
+                                    • Host your special events at Shaka Shack and create unforgettable memories against
+                                    the picturesque backdrop of Mahaballipuram's coastline. Whether it's a birthday
+                                    bash, anniversary celebrations, corporate day out, or a private celebration, our
+                                    team ensures seamless event planning and execution in a truly mesmerising setting.
+                                </p>
+
+                                <h3 class="font-bold">Entertainment</h3>
+                                <p class="text-gray-700">
+                                    • By day, you can enjoy the laid-back vibes, with the sound of waves mingling with
+                                    groovy beats that set the perfect seaside tone. As the sun sets, Shaka Shack comes
+                                    alive with fun-filled evenings featuring karaoke, beer pong, and sundowner sessions
+                                    that create a cozy beach club vibe. It’s the ideal spot to socialise, celebrate, and
+                                    make memories.
+
+
+                                </p>
+
+                            </div>
+                            <!-- <h1 class="text-2xl font-bold">1. HIIT with Weights:</h1> -->
+                        </div>
                     </div>
                 </div>
             </div>
@@ -263,8 +657,8 @@
 
 
     <section class="bg-white max-w-7xl mx-auto mt-10 rounded-lg shadow-lg p-2" id="highlights">
-        <h2 class="text-3xl font-bold text-center text-gray-800">Highlights</h2>
-        <h3 class="text-center text-gray-600 mt-4">
+        <h2 class="text-3xl font-bold text-center text-gray-800 pacifico">Highlights</h2>
+        <h3 class="text-center text-black mt-4 font-light lao-sans-pro">
             Embrace the beach lifestyle with our diverse facilities - beachfront dining, ocean sports,
             wellness classes and groovy tunes playing all day long.
             Relax in style and enjoy the
@@ -276,11 +670,11 @@
                 <img src="Image/image (1).png" alt="Coconut Drink on Beach"
                     class="w-full h-full object-cover relative z-0 transition-all duration-300 hover:scale-110">
                 <div class="absolute inset-0 flex items-center justify-center  ">
-                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg">Cuisine</span>
+                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg merienda-one">Cuisine</span>
                 </div>
             </div>
             <div class="md:w-2/3 p-2">
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 text-lg lao-muang">
                     Savour our delectable cuisine crafted from locally sourced ingredients, offering a fusion of
                     flavours that tantalise the taste buds. Our chefs create culinary masterpieces that reflect
                     the essence of coastal dining, ensuring a memorable gastronomic journey for every guest.
@@ -294,11 +688,12 @@
                 <img src="Image/group-girl-doing-yoga.png" alt="Coconut Drink on Beach"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg">Adventure Awaits</span>
+                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg merienda-one">Adventure
+                        Awaits</span>
                 </div>
             </div>
             <div class="md:w-2/3 p-2">
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 text-lg lao-muang">
                     Embark on thrilling adventures with our array of activities, from surfing the waves to
                     exploring the underwater world through scuba diving. Unwind with kayaking excursions,
                     find inner peace with yoga sessions, or boost your fitness with our High-Intensity Interval
@@ -311,11 +706,11 @@
                 <img src="Image/cute-couple-celebrating-their-wedding-beach.png" alt="Coconut Drink on Beach"
                     class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg">Events</span>
+                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg merienda-one">Events</span>
                 </div>
             </div>
             <div class="md:w-2/3 p-2">
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 text-lg lao-muang">
                     Host your special events at Shaka Shack and create unforgettable memories against the
                     picturesque backdrop of Mahaballipuram’s coastline. Whether it’s a birthday bash,
                     anniversary celebrations, corporate day out, or a private celebration, our team ensures
@@ -328,11 +723,12 @@
             <div class="md:w-1/3 relative h-48">
                 <img src="Image/image (2).png" alt="Coconut Drink on Beach" class="w-full h-full object-cover">
                 <div class="absolute inset-0 flex items-center justify-center">
-                    <span class="text-white text-xl font-semibold px-4 py-2 rounded-lg">Entertainment</span>
+                    <span
+                        class="text-white text-xl font-semibold px-4 py-2 rounded-lg merienda-one">Entertainment</span>
                 </div>
             </div>
             <div class="md:w-2/3 p-2">
-                <p class="text-gray-600 text-lg">
+                <p class="text-gray-600 text-lg lao-muang">
                     By day, you can enjoy the laid-back vibes, with the sound of waves mingling with groovy
                     beats that set the perfect seaside tone. As the sun sets, Shaka Shack comes alive with
                     fun-filled evenings featuring karaoke, beer pong, and sundowner sessions that create a
@@ -341,11 +737,11 @@
         </div>
     </section>
 
-    <section class="max-w-7xl mx-auto mt-10 p-2" id="highlights">
+    <!-- <section class="max-w-7xl mx-auto mt-10 p-2" id="highlights">
         <h2 class="text-3xl font-bold text-center text-gray-800">Reviews</h2>
         <p class="text-md mb-3 text-center mt-6">Real Stories, True Vibes, Hear from our Shaka Shack Tribe</p>
-        <script defer async src='https://cdn.trustindex.io/loader.js?5c6a95137c76268e5c465e5807a'> </script>    
-    </section>
+        <script defer async src='https://cdn.trustindex.io/loader.js?5c6a95137c76268e5c465e5807a'> </script>
+    </section> -->
 
 
     <!-- Map and Contact Details -->
@@ -363,14 +759,14 @@
             <!-- Contact Form Section (40%) -->
             <div class="flex-none md:w-2/5 bg-white rounded-md shadow p-4">
                 <div class="text-center md:text-left">
-                    <h2 class="text-2xl flex justify-center">Contact Us</h2>
-                    <h3 class="text-xl font-light flex justify-center mt-4">SHAKA SHACK</h3>
+                    <h2 class="text-2xl flex justify-center pacifico">Contact Us</h2>
+                    <h3 class="text-xl font-light flex justify-center mt-4 merienda-one">SHAKA SHACK</h3>
                     <p class="mt-2 text-center text-md text-gray-600">
                         Karukuzhiramman Kovil, Othavadai Street,<br>
                         East Coast Rd, Fisherman Colony, Mahabalipuram,<br>
                         Tamil Nadu 603104, India.
                     </p>
-                    <p class="mt-1 text-sm flex justify-around items-center">
+                    <p class="mt-1 text-sm flex justify-around items-center laila">
                         <span><strong>Email:</strong> psrahul@gmail.com</span>
                         <span><strong>Mobile:</strong> +91 9600019875</span>
                     </p>
@@ -378,15 +774,15 @@
                     <!-- Navigation Links and Social Media -->
                     <div class="mt-4 flex flex-col md:flex-row justify-between items-center">
                         <!-- Navigation Columns -->
-                        <div class="flex flex-col space-y-2">
-                            <a href="#home" class="text-sm text-gray-800 hover:text-blue-600">Home</a>
-                            <a href="#services" class="text-sm text-gray-800 hover:text-blue-600">Service</a>
-                            <a href="#gallery" class="text-sm text-gray-800 hover:text-blue-600">Gallery</a>
+                        <div class="flex flex-col space-y-2 laila">
+                            <a href="#home" class="text-sm text-gray-800 hover:text-blue-400">Home</a>
+                            <a href="#services" class="text-sm text-gray-800 hover:text-blue-400">Service</a>
+                            <a href="#gallery" class="text-sm text-gray-800 hover:text-blue-400">Gallery</a>
                         </div>
                         <div class="flex flex-col space-y-2">
-                            <a href="#about" class="text-sm text-gray-800 hover:text-blue-600">About</a>
-                            <a href="#highlights" class="text-sm text-gray-800 hover:text-blue-600">Highlights</a>
-                            <a href="#contact" class="text-sm text-gray-800 hover:text-blue-600">Contact Us</a>
+                            <a href="#about" class="text-sm text-gray-800 hover:text-blue-400">About</a>
+                            <a href="#highlights" class="text-sm text-gray-800 hover:text-blue-400">Highlights</a>
+                            <a href="#contact" class="text-sm text-gray-800 hover:text-blue-400">Contact Us</a>
                         </div>
                         <div class="flex space-x-2 mt-2">
                             <a href="" class="social-icon inline-block">
@@ -404,10 +800,6 @@
             </div>
         </div>
     </section>
-
-
-
-
 
 
     <script>
@@ -515,8 +907,33 @@
             });
         });
 
-       
+
+        function enableScrolling() {
+            const column2 = document.getElementById('column2');
+            const moreContent = document.getElementById('more-content');
+
+            // Make column2 scrollable
+            column2.classList.add('overflow-y-auto', 'max-h-64');
+
+            // Show the additional content
+            moreContent.classList.remove('hidden');
+
+            // Optionally scroll to the "more-content" section inside Column 2
+            moreContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        function openModal(modalId) {
+            document.getElementById(modalId).classList.remove('hidden');
+        }
+
+        // Function to close any modal by its ID
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.add('hidden');
+        }
+
+
     </script>
-    
+
 </body>
+
 </html>
