@@ -24,14 +24,19 @@
         <!-- Logo and Menu Icon -->
         <div class="flex items-center space-x-4">
             <!-- Menu Icon -->
-            <!-- Menu Icon (hidden on small screens) -->
             <button class="text-2xl text-gray-600 hover:text-gray-800 focus:outline-none" id="menu-btn">
                 <svg xmlns="" class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                 </svg>
             </button>
             <img src="Image/Untitled design (9) 1 (1).png" alt="Shaka Shack Logo" class="h-12 w-24">
-        </div>
+           </div>
+            <button
+            class="md:hidden lg:hidden focus:outline-none"
+            onclick="downloadMenuAsPDF()">
+            <img src="Image/downloading.png" alt="" class="h-8">
+        </button>
+           
 
         <!-- Tagline and Title -->
         <div class="text-center hidden md:block">
