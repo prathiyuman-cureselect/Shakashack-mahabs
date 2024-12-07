@@ -11,6 +11,10 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/dompurify@2.4.0/dist/purify.min.js"></script>
+
+
     <title>Shaka Shack</title>
 </head>
 
@@ -34,13 +38,32 @@
             <p class="text-sm text-gray-600 kalam">Where Waves, Vibes and Flavor Flow Together</p>
             <h1 class="text-2xl font-light text-teal-600 mynerve ">SHAKA SHACK</h1>
         </div>
-
-        <!-- Download Button -->
         <button
-            class="hidden md:flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none">
-            <img src="Image/download-circular-button.png" alt="" class="h-6">
-            <h1 class="hidden ml-2 md:inline ">Download Menu</h1>
-        </button>
+        class="hidden md:flex items-center px-4 py-2 bg-red-500 text-white rounded-md hover:bg-red-600 focus:outline-none"
+        onclick="downloadMenuAsPDF()">
+        <img src="Image/download-circular-button.png" alt="" class="h-6">
+        <h1 class="hidden ml-2 md:inline">Download Menu</h1>
+    </button>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    
+    <script>
+        function downloadMenuAsPDF() {
+            const element = document.getElementById('menu-content'); // Assuming the menu content is inside a div with this id
+            
+            const options = {
+                margin:       1,
+                filename:     'menu.pdf',
+                image:        { type: 'jpeg', quality: 0.98 },
+                html2canvas:  { scale: 4 },
+                jsPDF:        { unit: 'in', format: 'letter', orientation: 'portrait' }
+            };
+    
+            html2pdf().from(element).set(options).save();
+        }
+    </script>
+
     </header>
 
     <!-- Side Navigation -->
@@ -843,6 +866,112 @@
             </div>
         </div>
     </section>
+
+
+
+<!-- Main Container -->
+<section class="hidden">
+    <div id="menu-content" class="max-w-[8.27in] mx-auto bg-white shadow-2xl rounded-3xl p-6">
+        <!-- Logo -->
+        <div class="flex justify-center items-center mb-6">
+            <img src="Image/Untitled design (9) 1 (1).png" alt="Shaka Shack Logo"
+                class="w-24 h-24 rounded-full shadow-lg">
+        </div>
+
+        <!-- Menu Sections -->
+        <div class="space-y-8">
+            <!-- All Day Breakfast Section -->
+            <div>
+                <h2 class="text-2xl font-semibold mb-4 border-b-4 pb-1 text-center" style="color:#2596be;">All Day Breakfast</h2>
+                <ul class="space-y-4">
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Turkish Eggs</h3>
+                        <p class="text-gray-700">Garlic, yogurt, olive oil, cayenne pepper, mint, smoked paprika</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Shakshouka</h3>
+                        <p class="text-gray-700">Onion, tomato, capsicum, paprika, cayenne pepper, cumin, balsamic vinegar, white pepper, oregano, parsley garnish, chili oil</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Salads Section -->
+            <div>
+                <h2 class="text-2xl font-semibold mb-4 border-b-4 pb-1 text-center" style="color:#2596be;">Salads</h2>
+                <ul class="space-y-4">
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Greek Salad</h3>
+                        <p class="text-gray-700">Olive oil, lemon, salt, pepper, oregano, honey, feta, olives, parsley</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Shaka Salad</h3>
+                        <p class="text-gray-700">Sweet & chilli Thai, Chinese vinegar, sriracha, chilli flakes, pepper</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Watermelon Squid Salad</h3>
+                        <p class="text-gray-700">Bird's eye chilli, vinegar, mint leaves, pepper</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Watermelon Feta</h3>
+                        <p class="text-gray-700">Basil, pepper, olive oil, honey, oregano</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Thai Prawn Green Mango Salad</h3>
+                        <p class="text-gray-700">Prawn, onion, cucumber, capsicum, tomato, green mango, fish sauce, sugar, lemon, togarischi, sesame seeds</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Soup Section -->
+            <div>
+                <h2 class="text-2xl font-semibold mb-4 border-b-4 pb-1 text-center" style="color:#2596be;">Soup</h2>
+                <ul class="space-y-4">
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Tom Yum</h3>
+                        <p class="text-gray-700">Fish sauce, lime, kaffir lime leaf, lemongrass, sugar, coriander, mushroom, Thai prawn chili paste, galangal ginger</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Thermidor</h3>
+                        <p class="text-gray-700">English mustard, fresh cream, parsley, pepper, lime, oregano, salt, cheese</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Singapore Chilli Crab</h3>
+                        <p class="text-gray-700">Thai chilli paste, soy sauce, Chinese vinegar, sweet chilli sauce, birds eye chilli, mixed scramble egg, spring onion topping</p>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- Curry Section -->
+            <div>
+                <h2 class="text-2xl font-semibold mb-4 border-b-4 pb-1 text-center" style="color:#2596be;">Curry</h2>
+                <ul class="space-y-4">
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Kanthari</h3>
+                        <p class="text-gray-700">Mustard, cumin, onion, tomato, curry leaf, fenugreek seeds, red chillis, coconut milk & tamarind and temper with usual and chilli powder</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Chinese Stir Fry</h3>
+                        <p class="text-gray-700">Soy sauce, Chinese vinegar, spice, sesame seeds, capsicum, vegetables</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Stroganoff</h3>
+                        <p class="text-gray-700">Dijon mustard, fresh cream, butter, garlic, onion, mushroom, broth</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Turkish Kavurma</h3>
+                        <p class="text-gray-700">Onion, tomato, capsicum, cayenne pepper, paprika, cumin, salt, pepper, balsamic vinegar, oregano, chopped ginger and garlic</p>
+                    </li>
+                    <li class="p-4 bg-gray-50 rounded-lg shadow-lg hover:shadow-xl transition-all">
+                        <h3 class="text-xl font-bold">Phannaeg Curry</h3>
+                        <p class="text-gray-700">Thai chilli paste, coconut milk, kaffir lime leaf, lemon grass, peanut butter, basil, capsicum, garlic and galangal ginger, fish sauce, lime juice, sugar</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+
 
 
     <script>
