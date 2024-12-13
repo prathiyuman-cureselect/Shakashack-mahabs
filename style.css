@@ -88,7 +88,7 @@
     background: rgba(0, 0, 0, 0.5);
 }
 
-.dots-navigation {
+/* .dots-navigation {
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -108,4 +108,4 @@
 
 .dot.active {
     background-color: #fff;
-}
+} */
