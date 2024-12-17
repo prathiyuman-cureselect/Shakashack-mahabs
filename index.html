@@ -13,6 +13,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.2/html2pdf.bundle.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
 
 
@@ -21,7 +23,7 @@
 
 <body class="bg-custom-gradient min-h-screen">
     <!-- Header -->
-    <header class="flex justify-between items-center p-4 bg-white shadow-lg fixed top-0 w-full z-10">
+    <header class="flex justify-between items-center p-2 bg-white shadow-lg fixed top-0 w-full z-10">
         <!-- Logo and Menu Icon -->
         <div class="flex items-center space-x-4">
             <!-- Menu Icon -->
@@ -38,7 +40,7 @@
 
 
         <!-- Tagline and Title -->
-        <div class="text-center hidden md:block">
+        <div class="text-center hidden md:block mt-2">
             <p class="text-sm text-gray-600 kalam">Where Waves, Vibes and Flavor Flow Together</p>
             <h1 class="text-2xl font-light text-teal-600 mynerve ">SHAKA SHACK</h1>
         </div>
@@ -85,16 +87,15 @@
 
     <!-- Hero Slider Section -->
     <section class="hero-slider" id="home">
-        <div class="hero-slide active" style="background-image: url('Image/jpeg/h1.jpeg');">
+        <div class="hero-slide-wrapper w-full h-screen">
+            <img src="Image/jpeg/h1.jpeg" alt="Slide 1" class="hero-slide w-full h-full object-cover    ">
+            <img src="Image/jpeg/h2.jpeg" alt="Slide 2" class="hero-slide w-full h-full object-cover">
+            <img src="Image/jpeg/h3.jpeg" alt="Slide 3" class="hero-slide w-full h-full object-cover">
+            <img src="Image/jpeg/h4.jpeg" alt="Slide 4" class="hero-slide w-full h-full object-cover">
+            <img src="Image/jpeg/shore temple.jpg" alt="Shore Temple" class="hero-slide w-full h-full object-cover">
         </div>
-        <div class="hero-slide active" style="background-image: url('Image/jpeg/h2.jpeg');">
-        </div>
-        <div class="hero-slide active" style="background-image: url('Image/jpeg/h3.jpeg');">
-        </div>
-        <div class="hero-slide active" style="background-image: url('Image/jpeg/h4.jpeg');">
-        </div>
-        <div class="hero-slide active" style="background-image: url('Image/jpeg/shore\ temple.jpg');">
-        </div>
+
+
         <div class="slider-navigation">
             <div class="nav-button prev">&#10094;</div>
             <div class="nav-button next">&#10095;</div>
@@ -104,13 +105,13 @@
             <div class="dot" data-slide="1"></div>
             <div class="dot" data-slide="2"></div>
             <div class="dot" data-slide="3"></div>
-            <div class="dot" data-slide="4"></div>
+            <div class="dot" id="about" data-slide="4"></div>
 
         </div>
     </section>
 
     <!-- About us  -->
-    <section id="about"
+    <section data-aos="fade-up"
         class="max-w-7xl mx-auto p-6 mt-10 bg-white rounded-lg shadow-lg flex flex-col md:flex-row items-center space-y-4 md:space-y-0 md:space-x-8">
 
         <!-- Text Content -->
@@ -129,7 +130,7 @@
                 karaoke, and beer pong, all while the sound of waves serenades your groovy beats that keep the vibe
                 alive.
             </p>
-            <p class="text-gray-600 lao-sans-pro text-center">
+            <p class="text-gray-600 lao-sans-pro text-center" id="services">
                 Join us in our little slice of paradise, where every moment is designed to welcome, provide, and fulfill
                 your every desire. Come for the food, stay for the fun, and leave with memories that will last a
                 lifetime!
@@ -145,7 +146,7 @@
 
 
     <!-- Services-->
-    <section class="mt-10" id="services">
+    <section class="mt-10" data-aos="fade-up">
         <div class="bg-white rounded-lg max-w-7xl mx-auto p-4">
             <!-- Header -->
             <h2 class="text-3xl font-bold text-center text-gray-800 mb-2 pacifico">Services</h2>
@@ -157,7 +158,7 @@
             <!-- Cards Section -->
             <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
                 <div class="border-2 text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #2596be;">
+                    style="border-color: #2596be;" data-aos="fade-up">
                     <div class="text-white p-2 text-xl text-center" style="background-color:#2596be ;">
                         <h2 class="merienda-one">Yoga</h2>
                         <p class="text-sm kalam mt-2">Find Your Flow, Breathe with the Waves</p>
@@ -214,9 +215,8 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #2596be;">
+                    style="border-color: #2596be;" data-aos="fade-up">
                     <div class=" text-white p-2 text-xl text-center" style="background-color:#2596be ;">
                         <h2 class="text-merdian merienda-one">Surfing</h2>
                         <p class="text-sm kalam mt-2">Riding Waves at a UNESCO Heritage Site</p>
@@ -237,8 +237,6 @@
                         </div>
                     </div>
                 </div>
-
-
                 <!-- Modal -->
                 <div id="popupModal1"
                     class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -333,10 +331,8 @@
                         </div>
                     </div>
                 </div>
-
-
                 <div class="border-2 rounded-lg text-gray-900 shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #2596be;">
+                    style="border-color: #2596be;" data-aos="fade-up">
                     <div class=" text-white p-2 text-xl text-center" style="background-color:#2596be ;">
                         <h2 class=" merienda-one">HIIT & Calisthenics</h2>
                         <p class="text-sm kalam mt-2">Sweat, Strengthen, Soak in the Vibes</p>
@@ -357,7 +353,6 @@
 
                     </div>
                 </div>
-
                 <!-- Modal -->
                 <div id="popupModal2"
                     class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
@@ -465,11 +460,10 @@
                         </div>
                     </div>
                 </div>
-
             </div>
             <div class="grid gap-4 sm:grid-cols-1 md:grid-cols-2 lg:grid-cols-3 mt-4">
                 <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #2596be;">
+                    style="border-color: #2596be;" data-aos="fade-up">
                     <div class=" text-white p-2 text-xl text-center" style="background-color:#2596be ;">
                         <h2 class="merienda-one">Work</h2>
                         <p class="text-sm kalam mt-2">Work with a View</p>
@@ -536,7 +530,7 @@
 
                 </div>
                 <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #2596be;">
+                    style="border-color: #2596be;" data-aos="fade-up">
                     <div class="text-white p-2 text-xl text-center" style="background-color: #2596be;">
                         <h2 class="merienda-one">Scuba Diving</h2>
                         <p class="text-sm kalam mt-2">Dive into History and Nature</p>
@@ -552,7 +546,8 @@
 
                         <div class="flex justify-center">
                             <button onclick="openModal('popupModal4')" aria-label="Scuba-Diving"
-                                class="font-semibold text-sm flex items-center justify-center" style="color: #2596be;">
+                                class="font-semibold text-sm flex items-center justify-center" id="highlights"
+                                style="color: #2596be;">
                                 View more <span class="ml-1">&raquo;</span>
                             </button>
                         </div>
@@ -628,7 +623,7 @@
                 </div>
 
                 <div class="border-2 bg-white text-gray-900 rounded-lg shadow-md overflow-hidden hover:shadow-lg transition-shadow duration-300"
-                    style="border-color: #2596be;">
+                    style="border-color: #2596be;" data-aos="fade-up">
                     <div class="text-white p-2 text-xl text-center" style="background-color: #2596be;">
                         <h2 class="merienda-one ">Kayaking & Snorkeling</h2>
                         <p class="text-sm kalam mt-2">A Heritage Adventure</p>
@@ -702,7 +697,7 @@
     </section>
 
 
-    <section class="bg-white max-w-7xl mx-auto mt-10 rounded-lg shadow-lg p-4" id="highlights">
+    <section data-aos="fade-up" class="bg-white max-w-7xl mx-auto mt-10 rounded-lg shadow-lg p-4">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 mt-2 pacifico">Highlights</h2>
         <h3 class="text-center text-black mt-4 font-light px-4 sm:px-8 lg:px-16">
             Embrace the beach lifestyle with our diverse facilities - beachfront dining, ocean sports,
@@ -711,9 +706,10 @@
         </h3>
 
         <!-- Highlights Section Cards -->
-        <div class="space-y-6 mt-4">
+        <div class="space-y-6 mt-4 ">
             <!-- Cuisine Card -->
-            <div class="flex flex-col lg:flex-row items-center bg-blue-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8"
+            <div  class="flex flex-col lg:flex-row items-center bg-blue-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8"
+            data-aos="fade-up"
                 style="background-color: #d9ecee;">
                 <div class="lg:w-1/3 relative h-48 w-full">
                     <img src="Image/Shakashack - Highlights/Cuisine.png" alt="ShakaShack-cuisine"
@@ -734,7 +730,7 @@
 
             <!-- Adventure Card -->
             <div class="flex flex-col lg:flex-row items-center bg-teal-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8"
-                style="background-color: #b9dbdf;">
+                style="background-color: #b9dbdf;"data-aos="fade-up">
                 <div class="lg:w-1/3 relative h-48 w-full">
                     <img src="Image/Shakashack - Highlights/Adventure Awaits.png" alt="Adventure"
                         class="w-full h-full object-cover object-top rounded-lg transition-transform duration-300 hover:scale-105">
@@ -756,7 +752,8 @@
 
             <!-- Events Card -->
             <div style="background-color: #d9ecee;"
-                class="flex flex-col lg:flex-row items-center bg-red-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8">
+                class="flex flex-col lg:flex-row items-center bg-red-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8"data-aos="fade-up">
+               
                 <div class="lg:w-1/3 relative h-48 w-full">
                     <img src="Image/Shakashack - Highlights/Events.png" alt="Events"
                         class="w-full h-full object-cover object-top rounded-lg transition-transform duration-300 hover:scale-105">
@@ -777,7 +774,7 @@
 
             <!-- Entertainment Card -->
             <div style="background-color: #b9dbdf;"
-                class="flex flex-col lg:flex-row items-center bg-yellow-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8">
+                class="flex flex-col lg:flex-row items-center bg-yellow-100 rounded-lg shadow-lg p-4 space-y-4 lg:space-y-0 lg:space-x-8" data-aos="fade-up">
                 <div class="lg:w-1/3 relative h-48 w-full">
                     <img src="Image/Shakashack - Highlights/Entertainment.png" alt="Entertainment"
                         class="w-full h-full object-cover object-top rounded-lg transition-transform duration-300 hover:scale-105">
@@ -807,19 +804,19 @@
 
 
     <!-- Map and Contact Details -->
-    <section class="p-4" id="contact">
-        <div class="flex flex-col md:flex-row gap-4 max-w-7xl mx-auto">
-            <!-- Map Section (60%) -->
-            <div class="flex-1 md:w-3/5 rounded-lg">
+    <section data-aos="fade-up" class="p-4" id="contact">
+        <div class="flex flex-col md:flex-row gap-6 max-w-7xl mx-auto items-stretch">
+            <!-- Map Section -->
+            <div class="flex-1 md:w-3/5 rounded-lg overflow-hidden shadow-lg">
                 <iframe title="ShakaShack-location"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3893.433878615763!2d80.19549067483506!3d12.619516887664469!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a53ad37ec7be4e9%3A0x31c3e3d48fb49730!2sShaka%20Shack!5e0!3m2!1sen!2sin!4v1731155332510!5m2!1sen!2sin"
-                    width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy"
+                    class="w-full h-[300px] md:h-full" style="border:0;" allowfullscreen="" loading="lazy"
                     referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
 
-            <!-- Contact Form Section (40%) -->
-            <div class="flex-none md:w-2/5 bg-white rounded-md shadow p-4">
+            <!-- Contact Form Section -->
+            <div class="flex-none md:w-2/5 bg-white rounded-lg shadow-lg p-6">
                 <div class="text-center md:text-left">
                     <h2 class="text-2xl flex justify-center pacifico mt-2">Contact Us</h2>
                     <h3 class="text-xl font-light flex justify-center mt-4 merienda-one">SHAKA SHACK</h3>
@@ -828,51 +825,58 @@
                         East Coast Rd, Fisherman Colony, Mahabalipuram,<br>
                         Tamil Nadu 603104, India.
                     </p>
-                    <p
-                        class="text-sm flex flex-col md:flex-row md:justify-around items-center text-center md:text-left space-y-2 md:space-y-0 laila">
-                        <span><strong>Email:</strong>
-                            <br> shakashack.mahabs@gmail.com</span>
-                        <span>
+                    <div
+                        class="flex flex-col lg:flex-row justify-between text-gray-600 mb-4 space-y-4 lg:space-y-0 lg:space-x-4">
+                        <div>
+                            <strong>Email:</strong>
+                            <p>shakashack.mahabs@gmail.com</p>
+                        </div>
+                        <div>
                             <strong>Mobile:</strong>
-                            <br>
-                            <span>+91 9342634906</span>
-                            <br>
-                            <span>+91 9600019875</span>
-                        </span>
-                    </p>
+                            <p>+91 9342634906</p>
+                            <p>+91 9600019875</p>
+                        </div>
+                    </div>
+
+                </div>
 
 
-                    <div class="mt-4 flex flex-col md:flex-row justify-between items-center">
-                        <div class="flex flex-col space-y-2 laila">
-                            <a href="#home" class="text-sm text-gray-800 hover:text-blue-400">Home</a>
-                            <a href="#services" class="text-sm text-gray-800 hover:text-blue-400">Service</a>
-                            <a href="#gallery" class="text-sm text-gray-800 hover:text-blue-400">Gallery</a>
-                        </div>
-                        <div class="flex flex-col space-y-2">
-                            <a href="#about_us" class="text-sm text-gray-800 hover:text-blue-400">About</a>
-                            <a href="#highlights" class="text-sm text-gray-800 hover:text-blue-400">Highlights</a>
-                            <a href="#contact" class="text-sm text-gray-800 hover:text-blue-400">Contact Us</a>
-                        </div>
-                        <div class="flex space-x-2 mt-2">
-                            <a href="https://www.instagram.com/shakashack.mahabs?igsh=MWJ4ZHppbzl4OXBraA=="
-                                class="social-icon inline-block" title="ShakaShack instagram"
-                                aria-label="ShakaShack Instagram">
-                                <img src="Image/instagram (4).png" alt="ShakaShack_Instagram_logo" class="h-8 w-8">
-                            </a>
-                            <a href="" class="social-icon inline-block">
-                                <img src="Image/facebook.png" alt="ShakaShack_Facrbook_logo" title="ShakaShack Facebook"
-                                    aria-label="ShakaShack Facebook" class="h-8 w-8">
-                            </a>
-                            <a href="" class="social-icon inline-block">
-                                <img src="Image/youtube (4).png" alt="ShakaShack_Youtube_logo"
-                                    title="ShakaShack Youtube" aria-label="ShakaShack Youtube" class="h-8 w-8">
-                            </a>
-                        </div>
+                <div class="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
+                    <!-- Links -->
+                    <div class="flex flex-col space-y-2 text-sm text-gray-700">
+                        <a href="#home" class="hover:text-blue-500 transition duration-300">Home</a>
+                        <a href="#services" class="hover:text-blue-500 transition duration-300">Service</a>
+                        <a href="#gallery" class="hover:text-blue-500 transition duration-300">Gallery</a>
+                    </div>
+                    <div class="flex flex-col space-y-2 text-sm text-gray-700">
+                        <a href="#about_us" class="hover:text-blue-500 transition duration-300">About</a>
+                        <a href="#highlights" class="hover:text-blue-500 transition duration-300">Highlights</a>
+                        <a href="#contact" class="hover:text-blue-500 transition duration-300">Contact Us</a>
+                    </div>
+                    <!-- Social Links -->
+                    <div class="flex space-x-4">
+                        <a href="https://www.instagram.com/shakashack.mahabs?igsh=MWJ4ZHppbzl4OXBraA=="
+                            aria-label="ShakaShack Instagram" title="ShakaShack Instagram">
+                            <img src="Image/instagram (4).png" alt="Instagram"
+                                class="h-8 w-8 hover:scale-110 transition-transform">
+                        </a>
+                        <a href="#" aria-label="ShakaShack Facebook" title="ShakaShack Facebook">
+                            <img src="Image/facebook.png" alt="Facebook"
+                                class="h-8 w-8 hover:scale-110 transition-transform">
+                        </a>
+                        <a href="#" aria-label="ShakaShack Youtube" title="ShakaShack Youtube">
+                            <img src="Image/youtube (4).png" alt="YouTube"
+                                class="h-8 w-8 hover:scale-110 transition-transform">
+                        </a>
                     </div>
                 </div>
             </div>
         </div>
+        </div>
     </section>
+
+
+    <!-- Menu Card -->
     <section class="hidden">
         <div id="menu-content"
             class="max-w-[8.27in] mx-auto bg-gradient-to-b from-blue-50 via-white to-blue-50 shadow-2xl rounded-3xl p-8">
@@ -1154,6 +1158,9 @@
 
             html2pdf().from(element).set(options).save();
         }
+
+        //Animation
+        AOS.init();
 
 
     </script>
