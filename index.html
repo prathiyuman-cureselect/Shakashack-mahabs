@@ -16,6 +16,21 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+    const targetNode = document.querySelector('#reviews');
+    if (!targetNode) return;
+
+    const observer = new MutationObserver(() => {
+        document.querySelectorAll('#reviews > a').forEach(element => {
+            element.style.display = 'none';
+        });
+    });
+
+    observer.observe(targetNode, { childList: true, subtree: true });
+});
+        </script>
+
 
 
     <title>Shaka Shack</title>
@@ -79,6 +94,8 @@
                     data-section="about">About</a>
                 <a href="#highlights" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded"
                     data-section="highlights">Highlights</a>
+                    <a href="#reviews" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded"
+                    data-section="reviews">Reviews</a>
                 <a href="#contact" class="block px-4 py-2 text-gray-800 hover:bg-gray-100 rounded"
                     data-section="contact">Contact Us</a>
             </nav>
@@ -796,6 +813,17 @@
         </div>
     </section>
 
+    <section data-aos="fade-up" class="bg-white max-w-7xl mx-auto mt-10 rounded-lg shadow-lg p-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 pacifico lg:mt-6">Hear From our Customers</h2>
+        
+        <!-- Review Section Cards -->
+        <div id="reviews" class="space-y-6 mt-4 ">
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-ae2b5854-51ee-452e-b798-8f466e5aa1b5" data-elfsight-app-lazy></div>
+            
+        </div>
+    </section>
+
 
     <!-- <section class="max-w-7xl mx-auto mt-10 p-2" id="highlights">
         <h2 class="text-3xl font-bold text-center text-gray-800">Reviews</h2>
@@ -852,6 +880,7 @@
                     <div class="flex flex-col space-y-2 text-sm text-gray-700">
                         <a href="#about_us" class="hover:text-blue-500 transition duration-300">About</a>
                         <a href="#highlights" class="hover:text-blue-500 transition duration-300">Highlights</a>
+                        <a href="#reviews" class="hover:text-blue-500 transition duration-300">Reviews</a>
                         <a href="#contact" class="hover:text-blue-500 transition duration-300">Contact Us</a>
                     </div>
                     <!-- Social Links -->
