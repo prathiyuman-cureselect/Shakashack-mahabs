@@ -16,23 +16,6 @@
     <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
 
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-    const targetNode = document.querySelector('#reviews');
-    if (!targetNode) return;
-
-    const observer = new MutationObserver(() => {
-        document.querySelectorAll('#reviews > a').forEach(element => {
-            element.style.display = 'none';
-        });
-    });
-
-    observer.observe(targetNode, { childList: true, subtree: true });
-});
-        </script>
-
-
-
     <title>Shaka Shack</title>
 </head>
 
@@ -814,12 +797,23 @@
     </section>
 
     <section data-aos="fade-up" class="bg-white max-w-7xl mx-auto mt-10 rounded-lg shadow-lg p-6">
+        <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 pacifico lg:mt-6">Events & Gallery</h2>
+        
+        <!-- Review Section Cards -->
+        <div id="reviews" class="space-y-6 mt-4 ">
+            <script src="https://static.elfsight.com/platform/platform.js" async></script>
+            <div class="elfsight-app-fe7ef6b4-bd3a-4e5d-b97e-2b7aecd54d30" data-elfsight-app-lazy></div>
+            
+        </div>
+    </section>
+
+    <section data-aos="fade-up" class="bg-white max-w-7xl mx-auto mt-10 rounded-lg shadow-lg p-6">
         <h2 class="text-3xl md:text-4xl font-bold text-center text-gray-800 pacifico lg:mt-6">Hear From our Customers</h2>
         
         <!-- Review Section Cards -->
         <div id="reviews" class="space-y-6 mt-4 ">
             <script src="https://static.elfsight.com/platform/platform.js" async></script>
-            <div class="elfsight-app-ae2b5854-51ee-452e-b798-8f466e5aa1b5" data-elfsight-app-lazy></div>
+            <div class="elfsight-app-2721ae2f-e947-4557-8ba6-578f58e1b912" data-elfsight-app-lazy></div>
             
         </div>
     </section>
